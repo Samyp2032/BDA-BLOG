@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<section id="acciones">
+    <form action="/borrar_comentarios" method="POST">
+        <button type="submit" class="important">Borrar Todos los Comentarios</button>
+    </form>
+
+    <form action="/limpiar_cache" method="POST">
+        <button type="submit" class="secondary">Limpiar Caché</button>
+    </form>
+</section>
+
+<section id="formulario">
+    <h2>Agregar Comentario</h2>
+    <form action="/comentarios" method="POST" enctype="multipart/form-data">
+        <label for="autor">Nombre:</label>
+        <input type="text" id="autor" name="autor" required>
+
+        <label for="contenido">Comentario:</label>
+        <textarea id="contenido" name="contenido" required></textarea>
+
+        <label for="imagen">Subir Imagen (opcional):</label>
+        <input type="file" id="imagen" name="imagen">
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<section id="dataset">
+    <h2>Cargar Dataset</h2>
+    <form action="/cargar_dataset" method="POST" enctype="multipart/form-data">
+        <label for="dataset">Subir Dataset CSV:</label>
+        <input type="file" id="dataset" name="dataset" accept=".csv" required>
+        <button type="submit">Cargar</button>
+    </form>
+</section>
+{% endblock %}

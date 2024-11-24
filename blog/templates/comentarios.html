@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<section id="comentarios">
+    <h2>Comentarios Recientes</h2>
+
+<!-- Lista de comentarios -->
+<div class="comentarios">
+    {% for comentario in comentarios %}
+    <div class="comentario">
+        <h3>{{ comentario.autor }}</h3>
+        <p>{{ comentario.contenido }}</p>
+        
+        {% if comentario.imagen %}
+        <img src="{{ url_for('static', filename=comentario.imagen) }}" alt="Imagen del comentario">
+        {% endif %}
+        
+        <small>Publicado el: {{ comentario.fecha }}</small>
+        <p>
+            <strong>Sentimiento:</strong>
+            {% if comentario.sentimiento == "Positivo" %}
+            <i class="fas fa-smile" style="color: green;"></i> Positivo
+            {% elif comentario.sentimiento == "Negativo" %}
+            <i class="fas fa-frown" style="color: red;"></i> Negativo
+            {% else %}
+            <i class="fas fa-meh" style="color: orange;"></i> Neutro
+            {% endif %}
+        </p>
+    </div>
+    {% endfor %}
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,359 @@
+/* General */
+body {
+    font-family: 'Sour Gummy', cursive; /* Fuente personalizada */
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Fondo claro */
+    color: #333; /* Texto oscuro */
+}
+
+/* Encabezado */
+header {
+    background-color: #4a90e2; /* Azul vibrante */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Sour Gummy', cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor de Comentarios */
+.comentarios {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Cápsula de Comentario */
+.comentario {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comentario:hover {
+    transform: scale(1.02); /* Aumenta ligeramente al pasar el mouse */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.comentario h3 {
+    font-size: 1.4rem;
+    color: #4a90e2;
+    margin: 0;
+}
+
+.comentario p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.comentario img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comentario small {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Iconos de Sentimientos */
+.comentario p strong {
+    font-size: 1.1rem;
+}
+
+.comentario p i {
+    margin-right: 5px;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
+/* Formulario de Comentarios */
+#formulario {
+    margin: 30px auto;
+    max-width: 800px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formulario h2 {
+    font-size: 1.8rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+#formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#formulario input[type="text"],
+#formulario textarea,
+#formulario input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#formulario button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario button:hover {
+    background-color: #357abd; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Pie de Página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+
+    .comentario {
+        padding: 10px;
+    }
+
+    #formulario {
+        padding: 15px;
+    }
+
+    #formulario h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Botón secundario para "Limpiar Caché" */
+form button.important {
+    display: block;
+    width: 100%;
+    background-color: #1caf1a; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+form button.important:hover {
+    background-color: #fd0202; /* Azul más oscuro */
+}
+
+/* Botón secundario para "Limpiar Caché" */
+form button.secondary {
+    display: block;
+    width: 100%;
+    background-color: #1caf1a; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius:40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button.secondary:hover {
+    background-color: #fd0202; /* Azul más oscuro */
+}
+
+/* Sección de formularios */
+section {
+    margin: 30px auto;
+    max-width: 600px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de secciones */
+section h2 {
+    font-size: 1.8rem;
+    color: #4a90e2; /* Azul vibrante */
+    margin-bottom: 20px;
+    text-align: center; /* Centrado */
+    font-family: 'Sour Gummy', cursive;
+}
+
+/* Formularios */
+section form {
+    margin-bottom: 20px;
+}
+
+section form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+section form input[type="text"],
+section form textarea,
+section form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+/* Botones del formulario */
+#formulario button {
+    display: block;
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#formulario button:hover {
+    background-color: #2a1e84; /* Azul más oscuro */
+}
+
+
+#dataset {
+    margin: 20px auto;
+    max-width: 600px; /* Limita el ancho para que no se desborde */
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#dataset h2 {
+    font-size: 1.8rem;
+    color: #4a90e2; /* Azul vibrante */
+    margin-bottom: 20px;
+    font-family: 'Sour Gummy', cursive;
+}
+
+/* Ajuste para el label y el input */
+#dataset label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left; /* Alineación izquierda */
+}
+
+#dataset input[type="file"] {
+    width: 100%; /* Asegúrate de que ocupe el ancho completo */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Evita el desbordamiento */
+}
+
+/* Botón del formulario */
+#dataset button {
+    width: 100%; /* Botón del mismo ancho que el input */
+    background-color: #4a90e2; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#dataset button:hover {
+    background-color: #2a1e84; /* Verde más oscuro */
+}
+
+/* Ajuste adicional para evitar desbordamientos */
+#dataset form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos */
+    align-items: stretch; /* Asegura que todos los elementos ocupen el mismo ancho */
+}
+
+/* Pie de página */
+footer {
+    margin-top: 30px;
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
